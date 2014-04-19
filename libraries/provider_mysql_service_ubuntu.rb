@@ -23,6 +23,7 @@ class Chef
 
             package 'debconf-utils' do
               action :install
+              options '--force-yes'
             end
 
             directory '/var/cache/local/preseeding' do
@@ -52,6 +53,7 @@ class Chef
             # ... because that's totally super convenient.
             package 'mysql-server' do
               action :install
+              options '--force-yes'
             end
 
             # service
