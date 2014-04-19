@@ -15,6 +15,7 @@ class Chef
             %w(mysql-client libmysqlclient-dev).each do |p|
               package p do
                 action :install
+                options '--force-yes'
               end
             end
           end
